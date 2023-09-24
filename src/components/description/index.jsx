@@ -3,8 +3,8 @@ import styles from './style.module.scss';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-export default function index({mousePosition, projects}) {
-  const [Index, setIndex] = useState(0);
+export default function Index({mousePosition, projects}) {
+  const [index, setIndex] = useState(0);
   const {x, y} = mousePosition;
 
   return (
@@ -23,7 +23,7 @@ export default function index({mousePosition, projects}) {
          style={{x, y}}
          >
           <Image 
-            src={`/images/${projects[Index].handle}/about.jpg`}
+            src={`/images/${projects[index].handle}/about.jpg`}
             alt="image"
             fill
           />
